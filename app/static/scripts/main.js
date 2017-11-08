@@ -8,7 +8,7 @@ function showSideNav(){
 
 function closeSideNav(){
     
-        $('.sidenav').css({"transform":"translateX(-15rem)"});
+        $('.sidenav').css({"transform":"translateX(-18rem)"});
 }
     
     

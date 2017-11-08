@@ -1,0 +1,56 @@
+
+@import 'theme';
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    background-color: $primary;
+    font-family: 'Roboto';
+    color: white;
+    align-items: center;
+    box-shadow: 1px 1px 3px black;
+    z-index: 4;
+    cursor: default;
+
+    button {
+        width: 64px;
+        height: 64px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+
+        i {
+            font-size: 25px;
+        }
+    }
+
+    h1 {
+        flex:5;
+        letter-spacing: 1px;
+        font-weight: 300;
+        margin: 8px;
+        padding: 0;
+    }
+
+    p{
+        flex:1;
+        font-size: 48px;
+        padding: 0;
+        margin: 0;
+        color: $primary-dark;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+
+        &:hover {
+            transform: rotate(360deg);
+            color: $primary-light;
+        }
+
+    }
+
+}
+
+

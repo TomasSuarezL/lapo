@@ -9,34 +9,47 @@
   color: white;
   align-items: center;
   box-shadow: 1px 1px 3px black;
-  z-index: 4; }
+  z-index: 4;
+  cursor: default; }
   .navbar button {
     width: 64px;
     height: 64px;
     background-color: transparent;
     border: none;
-    color: white; }
+    color: white;
+    cursor: pointer; }
     .navbar button i {
       font-size: 25px; }
   .navbar h1 {
-    flex: 3;
+    flex: 5;
     letter-spacing: 1px;
     font-weight: 300;
     margin: 8px;
     padding: 0; }
   .navbar p {
-    flex: 1; }
+    flex: 1;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+    color: #00070F;
+    transition: all 0.3s ease-in-out;
+    text-align: center; }
+    .navbar p:hover {
+      transform: rotate(360deg);
+      color: #053B81; }
 
 .sidenav {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   position: fixed;
   top: 0;
-  width: 15rem;
+  width: 18rem;
   background-color: #012452;
   z-index: 5;
-  -webkit-transform: translateX(-15rem);
-  -ms-transform: translateX(-15rem);
-  transform: translateX(-15rem);
+  -webkit-transform: translateX(-18rem);
+  -ms-transform: translateX(-18rem);
+  transform: translateX(-18rem);
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -44,8 +57,22 @@
   .sidenav .close {
     border: none;
     background: none;
+    cursor: pointer;
     color: white;
-    padding: 16px; }
+    padding: 16px;
+    align-self: flex-start; }
+  .sidenav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin: 8px;
+    font-family: 'Source Sans Pro';
+    border-bottom: 1px solid rgba(255, 255, 255, 0.54);
+    transition: all 0.4s ease-in-out; }
+    .sidenav a:hover {
+      background-color: #053B81; }
+    .sidenav a i {
+      margin-right: 16px; }
 
 body, html {
   background: #010E1D;

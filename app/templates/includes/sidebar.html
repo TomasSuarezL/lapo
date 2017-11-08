@@ -1,3 +1,6 @@
 <div class="sidenav">
-    <button class="close" onclick="closeSideNav()">Close</button>
+    <button class="close" onclick="closeSideNav()"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+    <a href="{{url_for('getDashboard')}}"><i class="fa fa-pie-chart" aria-hidden="true"></i>Dashboard</a>
+    <a href="{{url_for('getJuegos')}}"><i class="fa fa-trophy" aria-hidden="true"></i>Juegos</a>
+    <a href="{{url_for('getJugadores')}}"><i class="fa fa-users" aria-hidden="true"></i>Jugadores</a>
 </div>
