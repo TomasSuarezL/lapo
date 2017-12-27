@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include 'includes/styles.html' %}
+    <title>Lapo</title>
+</head>
+<body>
+  {% include 'includes/navbar.html' %}
+  {% include 'includes/sidebar.html' %}
+  <h2 class="subtitle-small">Cargar Lapo:</h2>
+  <div class="input-div">
+    <p>Cantidad Jugadores:</p> 
+    <input id="cant-jugadores" type="number" name="cant-jugadores" min="1" max="10" required>
+    <button id="btn-cant-jugadores" onclick="fillManosGrid()">GO!</button>
+    <p>Lugar:</p>
+    <input id="lugar" type="text" name="lugar" required>
+    <div class="fecha-container">
+        <p>Fecha:</p>
+        <input id="fecha-dia" type="number" name="fecha-dia" placeholder="Dia" min="1" max="31" required>
+        <input id="fecha-mes" type="number" name="fecha-mes" placeholder="Mes" min="1" max="12" required>
+        <input id="fecha-ano" type="number" name="fecha-ano" placeholder="Año" min="2017" max="2999" required>
+    </div>
+  </div>
+  <div class="manos-grid">
+  </div>
+  {% include 'includes/scripts.html' %}
+  <script src="/static/scripts/nuevoJuego.js"></script>
+</body>
+</html>"

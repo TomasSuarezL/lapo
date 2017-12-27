@@ -14,14 +14,15 @@
   <div class="main">
     {% for j in jugadores %}
     <div class="card">
-      <img src={{j.imgUrl}}/>
+      <img src='{{j.imgUrl}}'/>
       <div class="card-text">
-        <p class="card-p header"> {{j.apodo}} </p>
-        <p class="card-p subelem">  </p>
-        <p class="card-p subelem">  </p>
-        <p class="card-p subelem">  </p>
-        <p class="card-p subelem">  </p>
-        <p class="card-p subelem">  </p>
+        <p class="card-p header"> {{j.nombre}} </p>
+        <p class="card-p subheader">{{j.apodo}}</p>
+        <div class="card-p subelem"><p>Cantidad Partidas: </p><p class="valor">{{j.getPartidas()|length}}</p></div>
+        <div class="card-p subelem"><p>Total Puntos: </p><p class="valor">{{j.getTotalPuntos()}}</p></div>
+        <div class="card-p subelem"><p>Puntos/Partida:   </p><p class="valor">{{j.getPuntosPorPartida()}}</p></div>
+        <div class="card-p subelem"><p>Puntaje Maximo:  </p><p class="valor">{{j.getMaxPuntaje()}}</p></div>
+        <div class="card-p subelem"><p>Cantidad Ganadas:  </p><p class="valor">{{j.getCantidadGanadas()}}</p></div>
       </div>
     </div>
     {% endfor %}

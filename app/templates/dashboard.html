@@ -11,9 +11,31 @@
   {% include 'includes/navbar.html' %}
   {% include 'includes/sidebar.html' %}
   <p class="subtitle">Dashboard</p>
-  <div class="main">
-
+  <div class="dashboard-main">
+    <div class='data-field'>
+      <p class='data-header'>Puntos Totales</p> 
+      <p>{{estadisticas.puntosTotales}} Pts.</p>
+    </div>
+    <div class='data-field'>
+      <p class='data-header'>Promedio General</p> 
+      <p>{{estadisticas.promedioTotal}} Pts.</p>
+    </div>
+    <div class='data-field'>
+      <p class='data-header'>Cantidad Partidas</p> 
+      <p>{{estadisticas.cantidadPartidas}}</p>
+    </div>
+    <div class='data-field'>
+      <p class='data-header'>Máximo Histórico</p> 
+      <p>{{estadisticas.maximoHistorico}} Pts.</p>
+    </div>
+    <div class='data-field'>
+      <p class='data-header'>Manos Totales</p> 
+      <p>{{estadisticas.cantidadManos}}</p>
+    </div>
+    <canvas id="myChart" width="400" height="400"></canvas>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
   {% include 'includes/scripts.html' %}
+  <script src="/static/scripts/dashboard.js"></script>
 </body>
 </html>

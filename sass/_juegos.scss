@@ -1,0 +1,148 @@
+
+.juegos-main {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    & > .juego-card{
+        background-color: $primary-light;
+        border-bottom: 1px solid white;    
+    }
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.juego-card{
+    flex: 1;
+    padding: 16px;
+    background-color: $primary;
+    display: flex;
+    font: 18px 'Lato';
+    box-shadow: 2px 2px 2px black;
+    border-bottom: 1px solid $primary-light;
+    transition: all 0.3s ease-in-out; 
+
+    &:hover{
+        background-color: $primary-light;
+    }
+
+    &-p{
+        flex:1;
+        color: white;
+        margin: auto;
+        text-align: center;
+    }
+
+    &-header{
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+
+
+        i {
+            margin-right: 16px;
+        }
+    }
+    
+    &-text{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    color: $primary-light;
+    margin: 0;
+    font: 24px 'Lato';
+
+    p{
+        flex: 1;
+        margin: 0;
+        padding: 32px;
+        padding-bottom: 0;
+    
+        span{
+            font: 600 20px 'Roboto';
+            margin-right: 8px; 
+        }
+    }
+}
+
+.jugador-row {
+    color: whitesmoke;
+    font: 24px 'Source Sans Pro';
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    height: 7rem;
+    border-bottom: 1px solid white;
+    background-color: $primary-background;
+
+    &:first-child{
+        height: auto;
+        font-weight: bold;
+        background: linear-gradient(to bottom right,$primary-light,$primary);;
+    }
+
+    &:last-child {
+        // border-bottom: 1px solid $primary-light;
+    }
+
+    .jugador{
+        width: 9rem;
+        text-align: center;
+        overflow: hidden;
+        display: block;
+
+        img {
+            height: 100%;
+            width: 100%;
+            opacity: 0.4;
+            object-fit: cover;
+        }
+
+        .jugador-info { 
+            position: relative;
+            top: -95%;
+            
+            p{
+                color: white;
+                margin: 0;
+                background-color: rgba(0,0,0,0.25);
+                padding: 8px;
+                font-size: 18px;
+            }
+        }
+    }
+    
+    .manos{
+        flex:6;
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+    }
+
+    p {
+        flex:1;
+        margin: 8px;
+        align-self: center;
+        text-align: center;
+    }
+}
+
+.green {
+    color: #8BC34A;
+}
+
+.red {
+    color: #F44336;
+}
+
+

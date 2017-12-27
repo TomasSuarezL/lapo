@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include 'includes/styles.html' %}
+    <title>Lapo</title>
+</head>
+<body>
+  {% include 'includes/navbar.html' %}
+  {% include 'includes/sidebar.html' %}
+  <h2 class="subtitle">Juego: {{juego.fecha}}</h2>
+  <div class="info">
+      <p><span>Lugar: </span>{{juego.lugar}}</p>
+      <p><span>Ganador: </span>{{juego.ganador}}</p>
+  </div>
+  <div class="juegos-main">
+    <div class="jugador-row header">
+        <div class="jugador">
+        </div>
+        <p class="manos">Manos</p>
+        <p>Sumatoria</p>
+        <p>Ganadas</p>
+        <p>Perdidas</p>
+        <p>Posicion</p>
+    </div>
+    {% for mano in juego.getSortedManos() %}
+    <div class="jugador-row">
+        <div class="jugador">
+            <img src='{{mano.jugador.imgUrl}}'/>
+            <div class='jugador-info'>
+                <p>{{mano.jugador.nombre}}</p>
+                <p>{{mano.jugador.apodo}}</p>
+            </div>
+        </div>
+        <div class="manos">
+            {% for m in mano.manos.split(',') %}
+                {% if m|int < 10 %}
+                <p class="red">{{m}}</p>
+                {% else %}
+                <p class="green">{{m}}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <p>{{mano.getSum()}}</p>
+        <p>{{mano.getGanadas()}}</p>
+        <p>{{mano.getPerdidas()}}</p>
+        <p>{{mano.posicion}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% include 'includes/scripts.html' %}
+  <script src="/static/scripts/juegos.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Source+Sans+Pro:300|Zilla+Slab");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400|Source+Sans+Pro:300|Zilla+Slab|Lato");
 .navbar {
   position: fixed;
   width: 100%;
@@ -25,7 +25,8 @@
     letter-spacing: 1px;
     font-weight: 300;
     margin: 8px;
-    padding: 0; }
+    padding: 0;
+    white-space: nowrap; }
   .navbar p {
     flex: 1;
     font-size: 48px;
@@ -36,7 +37,10 @@
     text-align: center; }
     .navbar p:hover {
       transform: rotate(360deg);
-      color: #053B81; }
+      color: #0b4da3; }
+  .navbar .fn {
+    flex: 2;
+    color: #a30f0f; }
 
 .sidenav {
   display: flex;
@@ -70,74 +74,321 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.54);
     transition: all 0.4s ease-in-out; }
     .sidenav a:hover {
-      background-color: #053B81; }
+      background-color: #0b4da3; }
     .sidenav a i {
       margin-right: 16px; }
+
+.input-div {
+  display: flex;
+  flex-direction: row; }
+  .input-div p {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: white;
+    font: 16px 'Source Sans Pro';
+    padding: 16px;
+    margin: 0px;
+    white-space: nowrap;
+    text-align: right;
+    line-height: 30px; }
+  .input-div input {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 16px;
+    width: 64px;
+    padding: 8px;
+    outline: none;
+    background: #0b4da3;
+    border: none;
+    color: white; }
+  .input-div .lugar {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2; }
+  .input-div button {
+    -webkit-box-flex: 0.5;
+    -ms-flex: 0.5;
+    flex: 0.5;
+    margin: 16px;
+    border: 1px solid rgba(202, 228, 255, 0.849);
+    border-radius: 4px;
+    outline: none;
+    background: none;
+    padding: 0 24px 0 24px;
+    color: rgba(202, 228, 255, 0.849);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .input-div button:hover {
+      background-color: #012452; }
+  .input-div .fecha-container {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .input-div .fecha-container input {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      width: 72px; }
+
+.manos-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  font: 'Source Sans Pro'; }
+  .manos-grid-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 8px; }
+    .manos-grid-row input {
+      padding: 8px;
+      outline: none;
+      border: none; }
+    .manos-grid-row .jugador-input {
+      background-color: #012452;
+      color: white;
+      border-radius: 4px 0px 0px 4px; }
+    .manos-grid-row .manos-input {
+      flex: 1;
+      background-color: rgba(202, 228, 255, 0.849);
+      border-radius: 0px 4px 4px 0px; }
+  .manos-grid button {
+    margin: 16px;
+    width: 50%;
+    align-self: center;
+    border: 1px solid rgba(202, 228, 255, 0.849);
+    border-radius: 4px;
+    outline: none;
+    background: none;
+    padding: 8px;
+    color: rgba(202, 228, 255, 0.849);
+    transition: all 0.3s ease-in-out; }
+    .manos-grid button:hover {
+      background-color: #012452; }
+
+.juegos-main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px; }
+  .juegos-main > .juego-card {
+    background-color: #0b4da3;
+    border-bottom: 1px solid white; }
+  .juegos-main a {
+    text-decoration: none; }
+
+.juego-card {
+  flex: 1;
+  padding: 16px;
+  background-color: #012452;
+  display: flex;
+  font: 18px 'Lato';
+  box-shadow: 2px 2px 2px black;
+  border-bottom: 1px solid #0b4da3;
+  transition: all 0.3s ease-in-out; }
+  .juego-card:hover {
+    background-color: #0b4da3; }
+  .juego-card-p {
+    flex: 1;
+    color: white;
+    margin: auto;
+    text-align: center; }
+  .juego-card-header {
+    flex: 1;
+    flex-direction: row;
+    display: flex; }
+    .juego-card-header i {
+      margin-right: 16px; }
+  .juego-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
+
+.info {
+  display: flex;
+  flex-direction: row;
+  color: #0b4da3;
+  margin: 0;
+  font: 24px 'Lato'; }
+  .info p {
+    flex: 1;
+    margin: 0;
+    padding: 32px;
+    padding-bottom: 0; }
+    .info p span {
+      font: 600 20px 'Roboto';
+      margin-right: 8px; }
+
+.jugador-row {
+  color: whitesmoke;
+  font: 24px 'Source Sans Pro';
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  height: 7rem;
+  border-bottom: 1px solid white;
+  background-color: rgba(8, 32, 52, 0.5); }
+  .jugador-row:first-child {
+    height: auto;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #0b4da3, #012452); }
+  .jugador-row .jugador {
+    width: 9rem;
+    text-align: center;
+    overflow: hidden;
+    display: block; }
+    .jugador-row .jugador img {
+      height: 100%;
+      width: 100%;
+      opacity: 0.4;
+      object-fit: cover; }
+    .jugador-row .jugador .jugador-info {
+      position: relative;
+      top: -95%; }
+      .jugador-row .jugador .jugador-info p {
+        color: white;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        padding: 8px;
+        font-size: 18px; }
+  .jugador-row .manos {
+    flex: 6;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px; }
+  .jugador-row p {
+    flex: 1;
+    margin: 8px;
+    align-self: center;
+    text-align: center; }
+
+.green {
+  color: #8BC34A; }
+
+.red {
+  color: #F44336; }
+
+.dashboard-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 16px; }
+  .dashboard-main .data-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 22%;
+    border: 1px solid #012452;
+    margin: 8px; }
+    .dashboard-main .data-field .data-header {
+      background-color: #012452;
+      font: 16px 'Lato';
+      color: white; }
+    .dashboard-main .data-field p {
+      flex: 1;
+      color: white;
+      font: 32px 'Roboto';
+      font-weight: 200;
+      margin: 0;
+      padding: 8px; }
 
 body, html {
   background: #010E1D;
   margin: 0; }
 
-.subtitle {
-  padding-top: 62px;
-  color: white;
-  font: 38px 'Source Sans Pro';
-  margin: 21px; }
+.subtitle, .subtitle-small {
+  padding-top: 48px;
+  color: #0b4da3;
+  font: 52px 'Source Sans Pro';
+  margin: 32px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #0b4da3; }
+  .subtitle-small {
+    font-size: 32px;
+    margin-bottom: 8px; }
 
 .main {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: start; }
 
 .card {
-  flex: 0 1 20%;
-  min-width: 200px;
+  flex: 1 1 29%;
+  min-width: 19rem;
+  max-width: 19rem;
   display: block;
   background: rgba(7, 61, 90, 0.77);
   border: none;
   height: 20rem;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   border-radius: 4px;
-  margin: 16px;
   overflow: hidden;
-  transition: all 0.4s ease-in-out; }
+  transition: all 0.4s linear;
+  text-align: center; }
   .card img {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.7;
     border-radius: 4px;
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.5s linear;
+    object-fit: cover;
+    filter: grayscale(100%); }
   .card .card-text {
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 8px;
+    padding: 12px;
     position: relative;
-    bottom: 3rem;
+    bottom: 3.4rem;
     height: 3rem;
-    text-align: center;
-    background-color: rgba(7, 51, 70, 0.66);
+    text-align: left;
+    background-color: rgba(7, 51, 70, 0.5);
     font-family: 'Source Sans Pro';
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.3s linear; }
+    .card .card-text p.subheader {
+      opacity: 0;
+      margin-bottom: 16px; }
     .card .card-text .card-p {
-      height: 100%;
-      margin: 0; }
+      height: auto;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .card .card-text .card-p p {
+        margin: 0;
+        flex: 3; }
+      .card .card-text .card-p p.valor {
+        flex: 1;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center; }
 
 .card:hover {
-  transform: translateY(-20px); }
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: rotateY(10); }
   .card:hover .card-text {
     height: 16rem;
     bottom: 16rem; }
+    .card:hover .card-text p.subheader {
+      opacity: 1; }
   .card:hover img {
-    opacity: 0.1;
-    transform: rotateY(360deg); }
+    opacity: 0.7;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0); }
   .card:hover .subelem {
     opacity: 1; }
 
 .header {
+  height: 2rem;
   font-size: 20px;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  padding-bottom: 0; }
 
 .subelem {
   opacity: 0;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.4s ease-in; }

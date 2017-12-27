@@ -33,6 +33,7 @@
         font-weight: 300;
         margin: 8px;
         padding: 0;
+        white-space: nowrap;
     }
 
     p{
@@ -49,6 +50,11 @@
             color: $primary-light;
         }
 
+    }
+
+    .fn {
+        flex: 2;
+        color: rgba($color: #a30f0f, $alpha: 1.0)
     }
 
 }

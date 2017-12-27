@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include 'includes/styles.html' %}
+    <title>Lapo</title>
+</head>
+<body>
+  {% include 'includes/navbar.html' %}
+  {% include 'includes/sidebar.html' %}
+  <h2 class="subtitle">Juegos</h2>
+  <div class="juegos-main">
+    <div class="juego-card">
+      <div class="juego-card-header">
+        <p class="juego-card-p fecha"><i class="fa fa-calendar" aria-hidden="true"></i>FECHA</p>
+        <p class="juego-card-p"><i class="fa fa-map-marker" aria-hidden="true"></i>LUGAR  </p>
+        <p class="juego-card-p"><i class="fa fa-trophy" aria-hidden="true"></i>GANADOR</p>
+      </div>
+    </div>
+    {% for j in juegos %}
+      <a href="{{j.key.id()}}">  
+      <div class="juego-card">
+          <div class="juego-card-text">
+            <p class="juego-card-p fecha">{{j.fecha.strftime('%d/%m/%y')}} </p>
+            <p class="juego-card-p">{{j.lugar}}  </p>
+            <p class="juego-card-p">{{j.ganador}}  </p>
+          </div>
+      </div>
+      </a>
+    {% endfor %}
+  </div>
+  {% include 'includes/scripts.html' %}
+  <script src="/static/scripts/juegos.js"></script>
+</body>
+</html>
