@@ -11,6 +11,7 @@
         flex: 1 1 22%;
         border: 1px solid $primary;
         margin: 8px;
+        height: 6rem;
         
         .data-header{
             background-color: $primary;
@@ -28,9 +29,19 @@
             padding: 8px;
         }
 
-    }
-
-    
-
+    }  
 }
+
+.charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    .chart-container{
+        width: 400px;
+        height: 400px;
+    }
+    
+}
+
 

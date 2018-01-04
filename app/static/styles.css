@@ -70,13 +70,16 @@
     color: white;
     padding: 8px;
     margin: 8px;
-    font-family: 'Source Sans Pro';
+    font: 20px 'Source Sans Pro';
     border-bottom: 1px solid rgba(255, 255, 255, 0.54);
     transition: all 0.4s ease-in-out; }
     .sidenav a:hover {
       background-color: #0b4da3; }
     .sidenav a i {
       margin-right: 16px; }
+  .sidenav a.acerca {
+    margin-bottom: 32px;
+    margin-top: auto; }
 
 .input-div {
   display: flex;
@@ -283,7 +286,8 @@
     flex-direction: column;
     flex: 1 1 22%;
     border: 1px solid #012452;
-    margin: 8px; }
+    margin: 8px;
+    height: 6rem; }
     .dashboard-main .data-field .data-header {
       background-color: #012452;
       font: 16px 'Lato';
@@ -296,6 +300,14 @@
       margin: 0;
       padding: 8px; }
 
+.charts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .charts .chart-container {
+    width: 400px;
+    height: 400px; }
+
 body, html {
   background: #010E1D;
   margin: 0; }
@@ -305,7 +317,6 @@ body, html {
   color: #0b4da3;
   font: 52px 'Source Sans Pro';
   margin: 32px;
-  margin-bottom: 0;
   border-bottom: 1px solid #0b4da3; }
   .subtitle-small {
     font-size: 32px;
@@ -315,17 +326,16 @@ body, html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start; }
+  justify-content: start;
+  padding: 16px; }
 
 .card {
-  flex: 1 1 29%;
+  flex: 1 1 22%;
   min-width: 19rem;
-  max-width: 19rem;
   display: block;
   background: rgba(7, 61, 90, 0.77);
   border: none;
-  height: 20rem;
-  border-radius: 4px;
+  height: 23rem;
   overflow: hidden;
   transition: all 0.4s linear;
   text-align: center; }
@@ -333,7 +343,6 @@ body, html {
     width: 100%;
     height: 100%;
     opacity: 0.7;
-    border-radius: 4px;
     transition: all 0.5s linear;
     object-fit: cover;
     filter: grayscale(100%); }

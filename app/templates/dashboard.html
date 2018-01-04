@@ -32,7 +32,17 @@
       <p class='data-header'>Manos Totales</p> 
       <p>{{estadisticas.cantidadManos}}</p>
     </div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
+  <div class="charts">
+      <div class="chart-container">
+          <canvas id="ganadores" width="400" height="400"></canvas>
+      </div>
+      <div class="chart-container">
+          <canvas id="lugares" width="400" height="400"></canvas>
+      </div>
+      <div class="chart-container">
+          <canvas id="anos" width="400" height="400"></canvas>
+      </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
   {% include 'includes/scripts.html' %}

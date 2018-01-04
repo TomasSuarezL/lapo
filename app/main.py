@@ -4,8 +4,13 @@ from model.lapo_models import Jugador, Mano, Juego
 from model.estadisticas import Estadistica
 import logging
 
+# Blueprints
+from api.api import api
+
 logging.getLogger().setLevel(logging.DEBUG)
 app = Flask(__name__)
+
+app.register_blueprint(api)
 
 suarez = Jugador(nombre = "Tomas", apodo = "Suarez", imgUrl = "/static/images/suarez3.jpg")
 godi = Jugador(nombre = "Hueso", apodo = "Godinez", imgUrl = "/static/images/godi1.jpg" )

@@ -32,7 +32,7 @@
         color: white;
         padding: 8px;
         margin: 8px;
-        font-family: 'Source Sans Pro';
+        font: 20px 'Source Sans Pro';
         border-bottom: 1px solid rgba(255, 255, 255, 0.54);
         transition: all 0.4s ease-in-out;
 
@@ -43,6 +43,11 @@
         i{
             margin-right: 16px;
         }
+    }
+
+    a.acerca{
+        margin-bottom: 32px;
+        margin-top: auto;
     }
         
 }

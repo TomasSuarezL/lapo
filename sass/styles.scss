@@ -18,7 +18,6 @@ body, html{
   color: $primary-light;
   font: 52px 'Source Sans Pro';
   margin: 32px ;
-  margin-bottom: 0;
   border-bottom: 1px solid $primary-light;
 
   &-small{
@@ -33,17 +32,17 @@ body, html{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
+  padding: 16px;
 }
 
 .card {
-  flex: 1 1 29%;
+  flex: 1 1 22%;
   min-width: 19rem;
-  max-width: 19rem;
+  // max-width: 23rem;
   display: block;
   background: rgba(7, 61, 90, 0.77);
   border: none;
-  height: 20rem;;
-  border-radius: 4px;
+  height: 23rem;
   overflow: hidden;
   transition: all 0.4s linear;
   text-align: center;
@@ -52,7 +51,6 @@ body, html{
     width: 100%;
     height: 100%;
     opacity: 0.7;
-    border-radius: 4px; 
     transition: all 0.5s linear;
     object-fit: cover;
     filter: grayscale(100%);
