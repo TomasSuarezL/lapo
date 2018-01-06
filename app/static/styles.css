@@ -20,13 +20,16 @@
     cursor: pointer; }
     .navbar button i {
       font-size: 25px; }
-  .navbar h1 {
+  .navbar h2 {
     flex: 5;
     letter-spacing: 1px;
     font-weight: 300;
     margin: 8px;
     padding: 0;
     white-space: nowrap; }
+    .navbar h2 span {
+      font-weight: 800;
+      font-size: 30px; }
   .navbar p {
     flex: 1;
     font-size: 48px;
@@ -54,9 +57,9 @@
   -webkit-transform: translateX(-18rem);
   -ms-transform: translateX(-18rem);
   transform: translateX(-18rem);
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 2px 2px 5px black; }
   .sidenav .close {
     border: none;
@@ -316,7 +319,7 @@ body, html {
   padding-top: 48px;
   color: #0b4da3;
   font: 52px 'Source Sans Pro';
-  margin: 32px;
+  margin: 24px;
   border-bottom: 1px solid #0b4da3; }
   .subtitle-small {
     font-size: 32px;

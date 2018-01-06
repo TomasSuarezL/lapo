@@ -27,13 +27,18 @@
         }
     }
 
-    h1 {
+    h2 {
         flex:5;
         letter-spacing: 1px;
         font-weight: 300;
         margin: 8px;
         padding: 0;
         white-space: nowrap;
+
+        span{
+            font-weight: 800;
+            font-size: 30px;
+        }
     }
 
     p{
