@@ -20,9 +20,9 @@ pares = Jugador(nombre = "Pares", apodo = "Imbecil", imgUrl = "/static/images/pa
 carlitos = Jugador(nombre = "Lucas", apodo = "Carlitos", imgUrl = "/static/images/carlitos1.jpg")
 kary = Jugador(nombre = "Karina", apodo = "Kary", imgUrl = "/static/images/kary1.jpg" )
 carla = Jugador(nombre = "Carla", apodo = "Pestelina II", imgUrl = "/static/images/carla1.jpg")
+migue = Jugador(nombre = "Miguel", apodo = "Migue", imgUrl = "/static/images/migue1.jpg")
 
-
-jugadores = [suarez, godi, wilk, vasco, pares, carlitos, kary, carla]
+jugadores = [migue]
 
 
 @app.route('/')
